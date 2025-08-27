@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
   font-family: "Rajdhani", sans-serif;
 }
 
@@ -17,11 +18,10 @@
 
 #particles-js {
   position: fixed;
-  width: 100%;
   height: 100%;
+  width: 100%;
   background: var(--color-black);
   top: 0;
-  left: 0;
   z-index: -1;
 }
 
@@ -32,7 +32,10 @@ main {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10rem;
-  cursor: pointer;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
 }
 
 a {
@@ -98,7 +101,7 @@ a {
 #menu {
   position: fixed;
   top: 5%;
-  right: 2%;
+  right: 10px;
   color: var(--bg-primary);
   background: var(--text-white);
   padding: 10px;
@@ -116,11 +119,11 @@ a {
   right: 0;
   display: flex;
   justify-content: end;
-  transform: translateX(100%); /* Mulai di luar layar kanan */
-  transition: transform 0.3s ease; /* Animasi geser */
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
 }
 
-.sidebar-menu.active {
+.sidebar-menu.actived {
   transform: translateX(0);
 }
 
@@ -174,7 +177,7 @@ a {
   align-items: center;
   flex-direction: column;
   width: 350px;
-  height: 600px;
+  min-height: 300px;
   padding: 30px 10px;
   position: fixed;
   top: 13%;
@@ -477,7 +480,7 @@ a {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 200px; /* enough for content */
+  max-height: 200px;
   padding: 10px 0;
 }
 
@@ -499,7 +502,7 @@ a {
 
   .profil {
     width: 100%;
-    height: 700px;
+    min-height: 100px;
     position: relative;
   }
 
@@ -610,6 +613,12 @@ a {
 }
 
 @media (max-width: 660px) {
+  .profil img {
+    width: 80%;
+  }
+  .about {
+    width: 100%;
+  }
   .box {
     height: 400px;
   }

@@ -19,7 +19,7 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         setTimeout(() => {
           entry.target.classList.add("show");
-        }, index * 300); // 300ms delay per elemen
+        }, index * 100); // 300ms delay per elemen
         obs.unobserve(entry.target);
       }
     });
@@ -55,6 +55,6 @@ const menu = document.getElementById("menu");
 const navbar = document.querySelector(".sidebar-menu");
 
 menu.addEventListener("click", () => {
-  navbar.classList.toggle("active");
+  navbar.classList.toggle("actived");
   menu.classList.toggle("bx-x");
 });
