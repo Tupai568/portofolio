@@ -355,7 +355,7 @@ a {
   position: absolute;
   bottom: 20px;
   width: 90%;
-  height: 150px;
+  min-height: 150px;
   padding: 10px 30px;
   left: 0;
   right: 0;
@@ -625,5 +625,92 @@ a {
 
   .halaman-pertama .service {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 440px) {
+  .halaman-pertama .waktu {
+    font-size: 18px;
+  }
+  .halaman-pertama h1 {
+    font-size: 40px;
+  }
+
+  .halaman-pertama .descripsi {
+    font-size: 15px;
+  }
+
+  .halaman-pertama .item {
+    padding: 7px 15px;
+  }
+
+  .subjudul {
+    border-radius: 20px;
+    padding: 10px 0;
+    gap: 15px;
+  }
+
+  .subjudul h2 {
+    font-size: 30px;
+  }
+
+  .subjudul .bxs-circle {
+    font-size: 15px;
+  }
+
+  .halaman-dua .divisi {
+    flex-direction: column;
+    align-items: start;
+    margin: 10px 0 10px;
+    gap: 10px;
+  }
+
+  .halaman-dua .divisi h3 {
+    font-size: 25px;
+  }
+
+  .halaman-dua .divisi p {
+    margin-left: 50%;
+  }
+
+  .box {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .box-button {
+    bottom: 0;
+    width: 100%;
+    min-height: 10px;
+    padding: 10px 10px;
+    border-radius: 0;
+  }
+
+  .box-button .bxs-right-top-arrow-circle {
+    font-size: 40px;
+  }
+
+  .box-item p {
+    font-size: 15px;
+  }
+
+  .box-item h3 {
+    font-size: 20px;
+  }
+
+  .box-item span {
+    display: none;
+  }
+  .halaman-empat .skill-box {
+    width: 130px;
+    height: 130px;
   }
 }
